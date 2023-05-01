@@ -35,10 +35,10 @@ public class AnimeService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Anime not Found"));
     }
 
-    public ResponseEntity<Anime> save(Anime anime) {
+    public Anime save(Anime anime) {
         anime.setId(ThreadLocalRandom.current().nextLong(3, 100000));
         animes.add(anime);
-    return ResponseEntity.ok().build();
+    return anime;
 
 
     }

@@ -37,6 +37,6 @@ public class Controller {
     @PostMapping
     public ResponseEntity<Anime> animeSave(@RequestBody Anime anime ){
         animeService.save(anime);
-    return ResponseEntity.ok().build();
+    return new ResponseEntity<>(animeService.save(anime), HttpStatus.CREATED);
     }
 }
