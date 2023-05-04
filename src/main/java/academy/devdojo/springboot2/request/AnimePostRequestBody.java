@@ -3,6 +3,6 @@ package academy.devdojo.springboot2.request;
 import lombok.Data;
 
 @Data
-public class AnimeRequest {
+public class AnimePostRequestBody {
     private String name;
 }
